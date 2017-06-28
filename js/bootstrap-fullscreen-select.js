@@ -1,6 +1,6 @@
 'use strict';
 /*!
- * Bootstrap-fullscreen-select v1.5.1 (http://craftpip.github.io/bootstrap-fullscreen-select/)
+ * Bootstrap-fullscreen-select v1.5.2 (http://craftpip.github.io/bootstrap-fullscreen-select/)
  * Author: boniface pereira
  * Website: www.craftpip.com
  * Contact: hey@craftpip.com
@@ -287,7 +287,7 @@ if (typeof jQuery === 'undefined') {
             this.$c.find('.selected').each(function () {
                 selectedOptions.push($(this).data('value'));
             });
-            this.$e.val(selectedOptions);
+            this.$e.val(selectedOptions).trigger('change');
         },
         hide: function () {
 
