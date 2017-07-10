@@ -1,6 +1,6 @@
 'use strict';
 /*!
- * Bootstrap-fullscreen-select v1.5.2 (http://craftpip.github.io/bootstrap-fullscreen-select/)
+ * Bootstrap-fullscreen-select v1.5.3 (http://craftpip.github.io/bootstrap-fullscreen-select/)
  * Author: boniface pereira
  * Website: www.craftpip.com
  * Contact: hey@craftpip.com
@@ -59,6 +59,10 @@ if (typeof jQuery === 'undefined') {
                     var id = $(a).attr('data-msid');
                     $.mobileSelect.elements[id].show();
                 });
+            }
+            if (options === 'list') {
+                var id = $this.first().attr('data-msid');
+                return $.mobileSelect.elements[id].$c.find('a');
             }
             return;
         }
